@@ -3,13 +3,15 @@ const app = express();
 const cors = require('cors');
 app.use(express.static("public"));
 
+app.use(cors({
+    origin: 'https://brand-website.onrender.com'
+  }));
+
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/index.html");
 });
 
-app.use(cors({
-    origin: 'https://brand-website.onrender.com'
-  }));
+
 
 
 app.get("/api/brands", (req, res) => {
