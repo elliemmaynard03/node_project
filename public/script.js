@@ -27,7 +27,7 @@ const showBrands = async() => {
         section.append(owner);
 
         const img = document.createElement("img");
-        img.src = "http://localhost:10000/" + brand.img;
+        img.src = "https://brands.onrender.com/" + brand.img;
         img.classList.add("image");
         section.append(img);
 
