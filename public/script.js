@@ -27,16 +27,17 @@ const showBrands = async() => {
         section.append(owner);
 
         const img = document.createElement("img");
-        img.src = "http://localhost:3000/" + brand.img;
+        img.src = "http://localhost:1000/" + brand.img;
         img.classList.add("image");
         section.append(img);
+
     });
 
 }
 
 const getBrands = async() => {
     try {
-        return (await fetch("http://localhost:3000/api/brands")).json();
+        return (await fetch("http://localhost:1000/api/brands")).json();
     } catch (error) {
         console.log("error retrieving json");
         return "";

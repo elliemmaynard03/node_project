@@ -55,7 +55,7 @@ app.get("/api/brands", (req, res) => {
     res.json(brands);
 });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 1000;
 
 http.createServer(app).listen(port, () => {
     console.log(`Server is running on port ${port}`);
