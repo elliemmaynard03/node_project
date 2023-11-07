@@ -27,7 +27,7 @@ const showBrands = async() => {
         section.append(owner);
 
         const img = document.createElement("img");
-        img.src = "http://localhost:1000/" + brand.img;
+        img.src = "http://localhost:10000/" + brand.img;
         img.classList.add("image");
         section.append(img);
 
@@ -37,7 +37,7 @@ const showBrands = async() => {
 
 const getBrands = async() => {
     try {
-        return (await fetch("http://brands.onrendor.com/api/brands")).json();
+        return (await fetch("https://brands.onrender.com/api/brands")).json();
     } catch (error) {
         console.log("error retrieving json");
         return "";
