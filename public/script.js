@@ -37,7 +37,7 @@ const showBrands = async() => {
 
 const getBrands = async() => {
     try {
-        return (await fetch("http://localhost:10000/api/brands")).json();
+        return (await fetch("http://brands.onrendor.com/api/brands")).json();
     } catch (error) {
         console.log("error retrieving json");
         return "";
