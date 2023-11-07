@@ -4,14 +4,12 @@ const cors = require('cors');
 app.use(express.static("public"));
 
 app.use(cors({
-    origin: 'https://brand-website.onrender.com'
+    origin: 'https://brands.onrender.com'
   }));
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/index.html");
 });
-
-
 
 
 app.get("/api/brands", (req, res) => {
@@ -56,6 +54,8 @@ app.get("/api/brands", (req, res) => {
     res.json(brands);
 });
 
-app.listen(3000, () => {
-    console.log("listening");
+const port = process.env.PORT || 3000;
+
+http.createServer(app).listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 });
